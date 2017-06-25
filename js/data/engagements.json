@@ -1,0 +1,12 @@
+{
+    "engagements":[
+        {
+           "title": "DevOps Starter Kit",
+            "description": "You will build the entire solution during the course of this workshop all in a stress-free fun environment. By the end of this workshop you would have created a complete microservice solution. This solution will comprise of a reactive UI with various microservices, built on a variety of technologies, providing data and functionality. There is no expertise required from your side, just bring a laptop with a modern web browser.",
+            "technology":["Java","Node JS","Docker","Google Go"],
+            "oracleServices":["Developer Cloud Service","Application Container Cloud Service","Container Cloud Service", "MySQL Cloud Service"],
+            "useCases": ["DevOps","Microservices"],
+            "details":"devopsstarterkit"
+        }
+    ]
+}

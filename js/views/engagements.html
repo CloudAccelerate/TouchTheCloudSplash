@@ -1,0 +1,55 @@
+<div class="justifyCenter">
+    <div class="demo-grid-sizes demo-flex-display">
+        <div class="oj-flex oj-flex-items-pad">
+            <div class="oj-flex-item oj-md-justify-content-center">
+                <center><img width="600" src="https://cloudaccelerate.github.io/TTC-CommonContent/images/ttc-logo.png" alt="touch the cloud"></center>
+            </div>
+        </div>
+        <div class="oj-flex oj-flex-items-pad">
+            <div class="oj-sm-12 oj-md-2 oj-lg-2 oj-flex-item">
+                <div class="oj-flex oj-flex-items-pad">
+                    <div class="oj-flex-item">
+                        <h3>Filter</h3> </div>
+                    <div class="oj-flex-item" style="white-space: nowrap">
+                        <input aria-label="search box" placeholder="search by title" data-bind="value: titleSearch, valueUpdate: 'afterkeydown', ojComponent: {component: 'ojInputText', rootAttributes:{'style':'max-width:100%;'}}" />
+                        <div id="searchIcon" class="demo-icon-sprite demo-icon-search demo-search-position"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="oj-sm-12 oj-md-6 oj-lg-8 oj-flex-item">
+                <div class="oj-flex-item">
+                    <h3>Engagements</h3> </div>
+                <div id="touch-the-cloud-engagments">
+                    <div class="demo-scroll-container">
+                        <!-- ko if: ready -->
+                        <div class="oj-flex oj-flex-items-pad">
+                            <ul id="listviewcard" class="oj-flex oj-listview-card-layout" data-bind="ojComponent: {component: 'ojListView',
+                                    data: cardViewDataSource,
+                                    rootAttributes: {style: 'width:100%'},
+                                item: {template: 'engagementcard_template'}}"> </ul>
+                        </div>
+                        <!-- /ko -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script id="engagementcard_template" type="text/html">
+    <li class="oj-flex-item oj-sm-12 oj-md-12 oj-lg-6 oj-xl-6" style="margin:0;border-style:none">
+        <div class="oj-panel oj-panel-alt1" style="margin: 5px 0px 10px 0px;" data-bind="click: $parent.loadDetailsPage">
+            <div class="oj-flex oj-flex-items-pad">
+                <div class="oj-flex-item">
+                    <h2 class="engagament-title" aria-label="engagament title" data-bind="text: $data['title']" tabindex="0"></h2>
+                    <div class="engagament-description" data-bind="text: $data['description']"></div>
+                </div>
+            </div>
+            <!--
+                CLOUD THINK OF ADDING ORACLE SERVICES IMAGES
+                <div class="oj-flex oj-flex-items-pad" style="float: right;">
+                    <a tabindex="0" data-bind="attr:{href: function(data, event){$parent.getEmail(data)}" title="Email employee" class="demo-employee-email-icon"></a>
+                    <a tabindex="0" data-bind="click: function(data, event){$parent.getOrg(data, event)}, clickBubble: false"  title="show team members" class="demo-employee-org-icon"></a>
+                </div>
+--></div>
+    </li>
+</script>
