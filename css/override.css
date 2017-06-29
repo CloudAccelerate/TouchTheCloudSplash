@@ -9,3 +9,37 @@
 .engagament-title {
     font-weight: bold;
 }
+
+.touch-the-cloud-banner {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #006E87;
+    background-image: url(https://cloudaccelerate.github.io/TTC-CommonContent/images/ttc-top-banner.jpg);
+    box-sizing: border-box;
+    font-weight: 400;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    width: 100%;
+    height: 80px;
+    max-height: 80px;
+    padding: 0 16px;
+    margin: 0;
+}
+
+.banner-title {
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 20px;
+    letter-spacing: .005em;
+}
+
+.oj-md-justify-content-center {
+    margin: 0 auto;
+}

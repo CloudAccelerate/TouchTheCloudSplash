@@ -1,9 +1,28 @@
 <div class="justifyCenter">
     <div class="demo-grid-sizes demo-flex-display">
         <div class="oj-flex oj-flex-items-pad">
-            <div class="oj-flex-item oj-md-justify-content-center">
-                <center><img width="600" src="https://cloudaccelerate.github.io/TTC-CommonContent/images/ttc-logo.png" alt="touch the cloud"></center>
+<!--            CAROUSEL START      -->
+            <div id="filmstrip-carousel" class="oj-flex-item oj-md-justify-content-center">
+                  <div id="filmStripDiv" class="oj-panel" style="margin: 20px">
+                    <div id="filmStrip" 
+                         aria-label="Set of images" 
+                         data-bind="ojComponent: {
+                           component: 'ojFilmStrip', 
+                           maxItemsPerPage: 1,
+                           arrowPlacement: 'overlay', 
+                           arrowVisibility: 'auto'}">
+                      <!-- ko foreach: carouselImage -->
+                      <div class="oj-panel demo-filmstrip-item" 
+                           data-bind="style: {
+                             display: getItemInitialDisplay($index())}">
+                          <img width="600" data-bind="attr: { src: src}" alt="carousel image">
+                      </div>
+                      <!-- /ko -->
+                    </div>
+                  </div> <!-- end filmStripDiv -->
             </div>
+
+<!--            CAROUSEL END        -->
         </div>
         <div class="oj-flex oj-flex-items-pad">
             <div class="oj-sm-12 oj-md-2 oj-lg-2 oj-flex-item">

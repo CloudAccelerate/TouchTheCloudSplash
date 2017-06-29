@@ -2,11 +2,27 @@
     "engagements":[
         {
            "title": "DevOps Starter Kit",
-            "description": "You will build the entire solution during the course of this workshop all in a stress-free fun environment. By the end of this workshop you would have created a complete microservice solution. This solution will comprise of a reactive UI with various microservices, built on a variety of technologies, providing data and functionality. There is no expertise required from your side, just bring a laptop with a modern web browser.",
+            "description": "This workshop will focus on the Oracle Integration Cloud Service (ICS). Oracle ICS delivers best in class “Hybrid” Integration. ICS is a simple and powerful integration platform in the cloud to maximize the value of your investments in SaaS and on-premises applications. It includes an intuitive web based integration designer for point and click integration between applications and a rich monitoring dashboard that provides real-time insight into the transactions, all running on a mature runtime platform on Oracle Public Cloud. ICS will help accelerate integration projects and significantly shorten the time-to-market through it's intuitive and simplified designer, an intelligent data mapper, and a library of adapters to connect to various applications.",
             "technology":["Java","Node JS","Docker","Google Go"],
             "oracleServices":["Developer Cloud Service","Application Container Cloud Service","Container Cloud Service", "MySQL Cloud Service"],
             "useCases": ["DevOps","Microservices"],
             "details":"devopsstarterkit"
+        },
+        {
+           "title": "Quote To Order",
+            "description": "You will build the entire solution during the course of this workshop all in a stress-free fun environment. By the end of this workshop you would have created a complete “Quote to Order” solution. This solution will comprise of a mobile application, a process automation workflow, integration with an ERP and creating dashboards for visibility and business KPIs. No expertise or experience required We will have experienced instructors guide you through the tool’s online screens and explain how each service works. There is no expertise required from your side, just bring a laptop with a modern web browser and your mobile phone.",
+            "technology":["Java","Node JS","Docker","Google Go"],
+            "oracleServices":["Mobile Cloud Service","Mobile Application Accelerator (MAX)","Process Cloud Service","Integration Cloud Service", "Oracle EBS On-premise"],
+            "useCases": ["Quote to Order","Citizen Development","Application Integration"],
+            "details":"quotetoorder"
+        },
+        {
+           "title": "ICS Developer Workshop",
+            "description": "You will build the entire solution during the course of this workshop all in a stress-free fun environment. By the end of this workshop you would have created a complete microservice solution. This solution will comprise of a reactive UI with various microservices, built on a variety of technologies, providing data and functionality. There is no expertise required from your side, just bring a laptop with a modern web browser.",
+            "technology":["Java","Node JS","Docker","Google Go"],
+            "oracleServices":["Integration Cloud Serivce","Oracle Database On_premise","Oracle EBS On-premise"],
+            "useCases": ["Citizen Development","Application Integration"],
+            "details":"icsworkshop"
         }
     ]
 }

@@ -5,7 +5,7 @@
 /*
  * Your application specific code will go here
  */
-define(['ojs/ojcore', 'knockout', 'data/loader', 'ojs/ojknockout', 'ojs/ojlistview', 'ojs/ojmodel', 'ojs/ojrouter', 'ojs/ojtable'], function (oj, ko, loader) {
+define(['ojs/ojcore', 'knockout', 'data/loader', 'jquery', 'ojs/ojknockout', 'ojs/ojlistview', 'ojs/ojmodel', 'ojs/ojrouter', 'ojs/ojtable', 'ojs/ojfilmstrip', 'ojs/ojpagingcontrol'], function (oj, ko, loader, $) {
     function EngagementsViewModel() {
         var self = this;
         self.allEngagaments = ko.observableArray([]);
@@ -72,6 +72,35 @@ define(['ojs/ojcore', 'knockout', 'data/loader', 'ojs/ojknockout', 'ojs/ojlistvi
                 }
             }
         };
+        //        CAROUSEL INFORMATION
+        self.carouselImage = [{
+            "src": "./js/carousel/ttc-logo.png"
+        }, {
+            "src": "./js/carousel/devopsstarterkit.png"
+        }, {
+            "src": "./js/carousel/quotetoorder.png"
+        }, {
+            "src": "./js/carousel/icsworkshop.png"
+        }]
+        getItemInitialDisplay = function (index) {
+            return index < 3 ? '' : 'none';
+        };
+        getPagingModel = function () {
+            if (!self.pagingModel) {
+                self.pagingModel = $("#filmStrip").ojFilmStrip("getPagingModel");
+            }
+            return self.pagingModel;
+        };
+        //timer stuff for carousel
+        var timer = 5000;
+        var tid = setTimeout(moveCarousel, timer);
+
+        function moveCarousel() {
+            var pagingModel = getPagingModel();
+            var nextPage = (pagingModel.getPage() + 1) % pagingModel.totalSize();
+            pagingModel.setPage(nextPage);
+            tid = setTimeout(moveCarousel, timer);
+        }
     }
     return EngagementsViewModel;
 });
