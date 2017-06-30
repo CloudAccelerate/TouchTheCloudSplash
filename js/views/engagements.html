@@ -1,9 +1,8 @@
-<div class="justifyCenter">
-    <div class="demo-grid-sizes demo-flex-display">
         <div class="oj-flex oj-flex-items-pad">
 <!--            CAROUSEL START      -->
-            <div id="filmstrip-carousel" class="oj-flex-item oj-md-justify-content-center">
-                  <div id="filmStripDiv" class="oj-panel" style="margin: 20px">
+            <div  class="oj-flex-item">
+            
+            <div id="filmstrip-carousel" style="max-width: 900px; margin: 10px auto;">
                     <div id="filmStrip" 
                          aria-label="Set of images" 
                          data-bind="ojComponent: {
@@ -12,26 +11,59 @@
                            arrowPlacement: 'overlay', 
                            arrowVisibility: 'auto'}">
                       <!-- ko foreach: carouselImage -->
-                      <div class="oj-panel demo-filmstrip-item" 
-                           data-bind="style: {
-                             display: getItemInitialDisplay($index())}">
-                          <img width="600" data-bind="attr: { src: src}" alt="carousel image">
+                      <div class="oj-panel demo-filmstrip-item">
+                          <img data-bind="attr: { src: src}" alt="carousel image">
                       </div>
                       <!-- /ko -->
                     </div>
-                  </div> <!-- end filmStripDiv -->
             </div>
-
+                </div>
 <!--            CAROUSEL END        -->
         </div>
         <div class="oj-flex oj-flex-items-pad">
             <div class="oj-sm-12 oj-md-2 oj-lg-2 oj-flex-item">
                 <div class="oj-flex oj-flex-items-pad">
                     <div class="oj-flex-item">
-                        <h3>Filter</h3> </div>
+                        <h3>Search By</h3> </div>
                     <div class="oj-flex-item" style="white-space: nowrap">
-                        <input aria-label="search box" placeholder="search by title" data-bind="value: titleSearch, valueUpdate: 'afterkeydown', ojComponent: {component: 'ojInputText', rootAttributes:{'style':'max-width:100%;'}}" />
+                        <label for="titleSearch">Title</label>
+                        <input id="titleSearch" aria-label="search box" data-bind="value: titleSearch, valueUpdate: 'afterkeydown', ojComponent: {component: 'ojInputText', rootAttributes:{'style':'max-width:100%;'}}" />
                         <div id="searchIcon" class="demo-icon-sprite demo-icon-search demo-search-position"></div>
+                    </div>
+                    
+                    <div class="oj-flex-item" style="white-space: nowrap">
+                    <label for="cloudServicesFilter">Oracle Cloud Services</label>
+                      <ul id="cloudservices" style="display: none">
+                        <!-- ko foreach: cloudServicesList -->
+                            <li data-bind="attr: {'oj-data-value': value}">
+                              <img data-bind="attr: {src: src}" role="presentation" style="vertical-align:middle; width: 20px"/> 
+                              <span data-bind="text: display"></span>
+                            </li>
+                        <!-- /ko -->   
+                        </ul>
+                        <input id="cloudServicesFilter"
+                         data-bind="ojComponent: {component: 'ojCombobox',
+                                                  multiple: true,
+                                                  optionChange: serviceFilterChangeHandler,
+                                                  rootAttributes: {style:'max-width:98%'},
+                                                  list: 'cloudservices', value: []}"/>
+                    </div>
+                    <div class="oj-flex-item" style="white-space: nowrap">
+                    <label for="technologyFilter">Technology</label>
+                      <ul id="technologies" style="display: none">
+                        <!-- ko foreach: technologyList -->
+                            <li data-bind="attr: {'oj-data-value': value}">
+                              <img data-bind="attr: {src: src}" role="presentation" style="vertical-align:middle; width: 20px"/> 
+                              <span data-bind="text: display"></span>
+                            </li>
+                        <!-- /ko -->   
+                        </ul>
+                        <input id="technologyFilter"
+                         data-bind="ojComponent: {component: 'ojCombobox',
+                                                  multiple: true,
+                                                  optionChange: technologyFilterChangeHandler,
+                                                  rootAttributes: {style:'max-width:98%'},
+                                                  list: 'technologies', value: []}"/>
                     </div>
                 </div>
             </div>
@@ -52,8 +84,6 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
 <script id="engagementcard_template" type="text/html">
     <li class="oj-flex-item oj-sm-12 oj-md-12 oj-lg-6 oj-xl-6" style="margin:0;border-style:none">
         <div class="oj-panel oj-panel-alt1" style="margin: 5px 0px 10px 0px;" data-bind="click: $parent.loadDetailsPage">
@@ -62,6 +92,23 @@
                     <h2 class="engagament-title" aria-label="engagament title" data-bind="text: $data['title']" tabindex="0"></h2>
                     <div class="engagament-description" data-bind="text: $data['description']"></div>
                 </div>
+            </div>
+            <hr/>
+            <div class="oj-flex oj-flex-items-pad">
+                <fieldset style="display: inline-block; width: 100%">
+                    <legend>Oracle Services Used</legend>
+                <!-- ko foreach: { data: $data['oracleServices'], as: 'service' } -->
+                    <img height="40" data-bind="attr: { src: mapImage(service), title: mapDisplay(service)}" alt="service image">
+                <!-- /ko -->
+                </fieldset>
+            </div>
+            <div class="oj-flex oj-flex-items-pad">
+                <fieldset style="display: inline-block; width: 100%">
+                    <legend>Technologies Leveraged</legend>
+                <!-- ko foreach: { data: $data['technology'], as: 'tech' } -->
+                    <img height="40" data-bind="attr: { src: mapImage(tech), title: mapDisplay(tech)}" alt="technology image">
+                <!-- /ko -->
+                </fieldset>
             </div>
             <!--
                 CLOUD THINK OF ADDING ORACLE SERVICES IMAGES

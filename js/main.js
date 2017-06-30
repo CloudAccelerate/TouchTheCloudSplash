@@ -79,8 +79,7 @@ require(['ojs/ojcore'
                 childRouter.dispose();
             }
             , enter: function () {
-                var childRouter = router.createChildRouter('engage');
-                childRouter.defaultStateId = 'key';
+                var childRouter = router.createChildRouter('details');
                 router.currentState().value = childRouter;
             }
         }
