@@ -36,7 +36,6 @@ define(['ojs/ojcore', 'knockout', 'data/loader', 'data/images', 'jquery', 'ojs/o
             if (id) {
                 url = "js/data/" + id + ".json";
             }
-            console.log("getEngURL",url);
             return url;
         }
         self.loadData = function (id) {
