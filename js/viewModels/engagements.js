@@ -173,8 +173,8 @@ define(['ojs/ojcore', 'knockout', 'data/loader', 'jquery', 'data/images', 'ojs/o
         self.technologyList = ko.observableArray([]);
         self.useCaseList = ko.observableArray(
             [{
-                    "display": "Application Integration"
-                    , "value": "applicationintegration"
+                    "display": "Hybrid Integration"
+                    , "value": "hybridintegration"
                 }
                 , {
                     "display": "Citizen Development"

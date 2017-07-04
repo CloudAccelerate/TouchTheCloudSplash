@@ -13,7 +13,7 @@
             "description": "You will build the entire solution during the course of this workshop all in a stress-free fun environment. By the end of this workshop you would have created a complete “Quote to Order” solution. This solution will comprise of a mobile application, a process automation workflow, integration with an ERP and creating dashboards for visibility and business KPIs. No expertise or experience required We will have experienced instructors guide you through the tool’s online screens and explain how each service works. There is no expertise required from your side, just bring a laptop with a modern web browser and your mobile phone.",
             "technology":["max","database","ebsonprem"],
             "oracleServices":["mobile","process","integration"],
-            "useCases": ["quotetoorader","citizendevelopment","applicationintegration"],
+            "useCases": ["quotetoorader","citizendevelopment","hybridintegration"],
             "details":"quotetoorder"
         },
         {
@@ -21,7 +21,7 @@
             "description": "You will build the entire solution during the course of this workshop all in a stress-free fun environment. By the end of this workshop you would have created a complete microservice solution. This solution will comprise of a reactive UI with various microservices, built on a variety of technologies, providing data and functionality. There is no expertise required from your side, just bring a laptop with a modern web browser.",
             "technology":["database","ebsonprem"],
             "oracleServices":["integration"],
-            "useCases": ["citizendevelopment","applicationintegration"],
+            "useCases": ["citizendevelopment","hybridintegration"],
             "details":"icsworkshop"
         }
     ]
