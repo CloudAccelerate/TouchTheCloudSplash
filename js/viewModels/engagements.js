@@ -29,92 +29,88 @@ define(['ojs/ojcore', 'knockout', 'data/loader', 'jquery', 'data/images', 'ojs/o
         self.technologySearch = ko.observableArray([]);
         self.useCaseSearch = ko.observableArray([]);
         //filter - for now just title search
+        function titleIncluded(word, r) {
+            if (word.length === 0) return true;
+            var token = self.titleSearch().toLowerCase();
+            if (r.title.toLowerCase().indexOf(token) >= 0) {
+                return true;
+            }
+            return false;
+        }
+
+        function servicesIncluded(services, r) {
+            if (services.length === 0) return true;
+            var allMatch = true;
+            for (var i = 0; i < services.length; i++) {
+                var token = services[i].toLowerCase();
+                var matchFound = false;
+                for (var j = 0; j < r.oracleServices.length; j++) {
+                    var service = r.oracleServices[j].toLowerCase();
+                    if (service === token) {
+                        matchFound = true;
+                        break;
+                    }
+                }
+                if (!matchFound) {
+                    allMatch = false;
+                    break;
+                }
+            }
+            return allMatch;
+        }
+        
+        function technologyIncluded(technology, r) {
+            if (technology.length === 0) return true;
+            var allMatch = true;
+            for (var i = 0; i < technology.length; i++) {
+                var token = technology[i].toLowerCase();
+                var matchFound = false;
+                for (var j = 0; j < r.technology.length; j++) {
+                    var service = r.technology[j].toLowerCase();
+                    if (service === token) {
+                        matchFound = true;
+                        break;
+                    }
+                }
+                if (!matchFound) {
+                    allMatch = false;
+                    break;
+                }
+            }
+            return allMatch;
+        }
+        
+        function useCaseIncluded(useCases, r) {
+            if (useCases.length === 0) return true;
+            var allMatch = true;
+            for (var i = 0; i < useCases.length; i++) {
+                var token = useCases[i].toLowerCase();
+                var matchFound = false;
+                for (var j = 0; j < r.useCases.length; j++) {
+                    var service = r.useCases[j].toLowerCase();
+                    if (service === token) {
+                        matchFound = true;
+                        break;
+                    }
+                }
+                if (!matchFound) {
+                    allMatch = false;
+                    break;
+                }
+            }
+            return allMatch;
+        }
         self.filteredAllEngagements = ko.computed(function () {
             var engagamentFilter = new Array();
             if (self.allEngagaments().length !== 0) {
-                var filtered = false;
-                if (self.titleSearch().length !== 0) {
-                    ko.utils.arrayFilter(self.allEngagaments(), function (r) {
-                        var token = self.titleSearch().toLowerCase();
-                        if (r.title.toLowerCase().indexOf(token) >= 0) {
-                            engagamentFilter.push(r);
-                        }
-                    });
-                    filtered = true;
-                }
-                if (self.oracleServiceSearch().length !== 0) {
-                    ko.utils.arrayFilter(self.allEngagaments(), function (r) {
-                        var allMatch = true;
-                        for (var i = 0; i < self.oracleServiceSearch().length; i++) {
-                            var token = self.oracleServiceSearch()[i].toLowerCase();
-                            var matchFound = false;
-                            for (var j = 0; j < r.oracleServices.length; j++) {
-                                var service = r.oracleServices[j].toLowerCase();
-                                if (service === token) {
-                                    matchFound = true;
-                                    break;
-                                }
-                            }
-                            if (!matchFound) {
-                                allMatch = false;
-                                break;
-                            }
-                        }
-                        if (allMatch) {
-                            engagamentFilter.push(r);
-                        }
-                    });
-                    filtered = true;
-                }
-                if (self.technologySearch().length !== 0) {
-                    ko.utils.arrayFilter(self.allEngagaments(), function (r) {
-                        var allMatch = true;
-                        for (var i = 0; i < self.technologySearch().length; i++) {
-                            var token = self.technologySearch()[i].toLowerCase();
-                            var matchFound = false;
-                            for (var j = 0; j < r.technology.length; j++) {
-                                var service = r.technology[j].toLowerCase();
-                                if (service === token) {
-                                    matchFound = true;
-                                    break;
-                                }
-                            }
-                            if (!matchFound) {
-                                allMatch = false;
-                                break;
-                            }
-                        }
-                        if (allMatch) {
-                            engagamentFilter.push(r);
-                        }
-                    });
-                    filtered = true;
-                }
-                if (self.useCaseSearch().length !== 0) {
-                    ko.utils.arrayFilter(self.allEngagaments(), function (r) {
-                        var allMatch = true;
-                        for (var i = 0; i < self.useCaseSearch().length; i++) {
-                            var token = self.useCaseSearch()[i].toLowerCase();
-                            var matchFound = false;
-                            for (var j = 0; j < r.useCases.length; j++) {
-                                var service = r.useCases[j].toLowerCase();
-                                if (service === token) {
-                                    matchFound = true;
-                                    break;
-                                }
-                            }
-                            if (!matchFound) {
-                                allMatch = false;
-                                break;
-                            }
-                        }
-                        if (allMatch) {
-                            engagamentFilter.push(r);
-                        }
-                    });
-                    filtered = true;
-                }
-                if (!filtered) {
+                ko.utils.arrayFilter(self.allEngagaments(), function (r) {
+                    if (titleIncluded(self.titleSearch(), r) && servicesIncluded(self.oracleServiceSearch(), r)
+                       && technologyIncluded(self.technologySearch(),r) && useCaseIncluded(self.useCaseSearch(),r)) {
+                        engagamentFilter.push(r); 
+                    }
+                });
+                //if not being filtered then show all
+                if (self.titleSearch().length === 0 && self.oracleServiceSearch().length === 0 && self.technologySearch().length === 0 && self.useCaseSearch().length === 0) {
                     engagamentFilter = self.allEngagaments();
                 }
             }
