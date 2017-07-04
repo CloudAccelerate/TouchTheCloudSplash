@@ -1,8 +1,6 @@
         <div class="oj-flex oj-flex-items-pad">
 <!--            CAROUSEL START      -->
-            <div  class="oj-flex-item">
-            
-            <div id="filmstrip-carousel" style="max-width: 900px; margin: 10px auto;">
+            <div id="filmstrip-carousel" style="max-width: 900px; width:100%; margin: 10px auto;">
                     <div id="filmStrip" 
                          aria-label="Set of images" 
                          data-bind="ojComponent: {
@@ -11,19 +9,16 @@
                            arrowPlacement: 'overlay', 
                            arrowVisibility: 'auto'}">
                       <!-- ko foreach: carouselImage -->
-                      <div class="oj-panel demo-filmstrip-item">
-                          <img data-bind="attr: { src: src}" alt="carousel image">
-                      </div>
+                          <img data-bind="attr: { src: src}" style="width:100%;" alt="carousel image">
                       <!-- /ko -->
                     </div>
             </div>
-                </div>
 <!--            CAROUSEL END        -->
         </div>
         <div class="oj-flex oj-flex-items-pad">
             <div class="oj-sm-12 oj-md-2 oj-lg-2 oj-flex-item">
                 <div class="oj-flex oj-flex-items-pad">
-                    <div class="oj-flex-item">
+                    <div class="oj-flex-item oj-sm-12 oj-md-12 oj-lg-12">
                         <h3>Search By</h3> </div>
                     <div class="oj-flex-item" style="white-space: nowrap">
                         <label for="titleSearch">Title</label>
@@ -64,6 +59,22 @@
                                                   optionChange: technologyFilterChangeHandler,
                                                   rootAttributes: {style:'max-width:98%'},
                                                   list: 'technologies', value: []}"/>
+                    </div>
+                    <div class="oj-flex-item" style="white-space: nowrap">
+                    <label for="useCaseFilter">Use Case</label>
+                      <ul id="useCases" style="display: none">
+                        <!-- ko foreach: useCaseList -->
+                            <li data-bind="attr: {'oj-data-value': value}"> 
+                              <span data-bind="text: display"></span>
+                            </li>
+                        <!-- /ko -->   
+                        </ul>
+                        <input id="useCaseFilter"
+                         data-bind="ojComponent: {component: 'ojCombobox',
+                                                  multiple: true,
+                                                  optionChange: useCaseFilterChangeHandler,
+                                                  rootAttributes: {style:'max-width:98%'},
+                                                  list: 'useCases', value: []}"/>
                     </div>
                 </div>
             </div>

@@ -27,7 +27,7 @@ define(['ojs/ojcore', 'knockout', 'data/loader', 'jquery', 'data/images', 'ojs/o
         self.titleSearch = ko.observable('');
         self.oracleServiceSearch = ko.observableArray([]);
         self.technologySearch = ko.observableArray([]);
-        self.useCaseSearch = ko.observable('');
+        self.useCaseSearch = ko.observableArray([]);
         //filter - for now just title search
         self.filteredAllEngagements = ko.computed(function () {
             var engagamentFilter = new Array();
@@ -74,6 +74,30 @@ define(['ojs/ojcore', 'knockout', 'data/loader', 'jquery', 'data/images', 'ojs/o
                             var matchFound = false;
                             for (var j = 0; j < r.technology.length; j++) {
                                 var service = r.technology[j].toLowerCase();
+                                if (service === token) {
+                                    matchFound = true;
+                                    break;
+                                }
+                            }
+                            if (!matchFound) {
+                                allMatch = false;
+                                break;
+                            }
+                        }
+                        if (allMatch) {
+                            engagamentFilter.push(r);
+                        }
+                    });
+                    filtered = true;
+                }
+                if (self.useCaseSearch().length !== 0) {
+                    ko.utils.arrayFilter(self.allEngagaments(), function (r) {
+                        var allMatch = true;
+                        for (var i = 0; i < self.useCaseSearch().length; i++) {
+                            var token = self.useCaseSearch()[i].toLowerCase();
+                            var matchFound = false;
+                            for (var j = 0; j < r.useCases.length; j++) {
+                                var service = r.useCases[j].toLowerCase();
                                 if (service === token) {
                                     matchFound = true;
                                     break;
@@ -147,6 +171,35 @@ define(['ojs/ojcore', 'knockout', 'data/loader', 'jquery', 'data/images', 'ojs/o
         }
         self.cloudServicesList = ko.observableArray([]);
         self.technologyList = ko.observableArray([]);
+        self.useCaseList = ko.observableArray(
+            [{
+                    "display": "Application Integration"
+                    , "value": "applicationintegration"
+                }
+                , {
+                    "display": "Citizen Development"
+                    , "value": "citizendevelopment"
+                }
+                , {
+                    "display": "DevOps"
+                    , "value": "devops"
+                }
+                , {
+                    "display": "Microservices"
+                    , "value": "microservices"
+                }
+                , {
+                    "display": "Quote to Order"
+                    , "value": "quotetoorader"
+                }
+                , {
+                    "display": "Continuous Deployment"
+                    , "value": "cd"
+                }
+                , {
+                    "display": "Continuous Integration"
+                    , "value": "ci"
+                }]);
         Object.keys(images.getMap()).forEach(function (key) {
             var obj = images.getImage(key);
             if (obj.type === 'service') {
@@ -170,6 +223,9 @@ define(['ojs/ojcore', 'knockout', 'data/loader', 'jquery', 'data/images', 'ojs/o
         self.technologyList.sort(function (left, right) {
             return left.display.toLowerCase() < right.display.toLowerCase() ? -1 : 1
         });
+        self.useCaseList.sort(function (left, right) {
+            return left.display.toLowerCase() < right.display.toLowerCase() ? -1 : 1
+        });
         serviceFilterChangeHandler = function (context, valueParam) {
             if (valueParam.option == "value") {
                 self.oracleServiceSearch.removeAll();
@@ -183,6 +239,14 @@ define(['ojs/ojcore', 'knockout', 'data/loader', 'jquery', 'data/images', 'ojs/o
                 self.technologySearch.removeAll();
                 for (var i = 0; i < valueParam.value.length; i++) {
                     self.technologySearch.push(valueParam.value[i]);
+                }
+            }
+        }
+        useCaseFilterChangeHandler = function (context, valueParam) {
+            if (valueParam.option == "value") {
+                self.useCaseSearch.removeAll();
+                for (var i = 0; i < valueParam.value.length; i++) {
+                    self.useCaseSearch.push(valueParam.value[i]);
                 }
             }
         }
