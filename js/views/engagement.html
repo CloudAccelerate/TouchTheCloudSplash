@@ -30,7 +30,7 @@
                                             <div class="oj-flex oj-flex-items-pad">
                                                 <div class="oj-flex-item">
                                                     <h2 class="engagament-title" aria-label="engagament title">About:</h2>
-                                                    <div class="engagament-description" data-bind="text: about"></div>
+                                                    <div class="engagament-description" data-bind="html: about"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -62,7 +62,7 @@
                                     <li class="oj-flex-item oj-sm-12 oj-md-12 oj-lg-12 oj-xl-12" style="margin:0;border-style:none">
                                         <div class="oj-panel oj-panel-alt1" style="margin: 5px 0px 10px 0px;">
                                             <div class="oj-flex oj-flex-items-pad">
-                                                <div class="oj-flex-item">
+                                                <div class="oj-flex-item" style="overflow:auto;">
                                                     <h2 class="engagament-title" aria-label="engagament title">Sample Agenda</h2>
                                                     <table id="table" summary="Task List" aria-label="Tasks Table"
                                                         data-bind="ojComponent: 
@@ -72,9 +72,10 @@
                                                             display: 'grid',
                                                             columnsDefault: {sortable: 'none'}, 
                                                             columns:
-                                                                [{headerText: '',field: 'title'},
-                                                                {headerText: 'Start',field: 'start'},
-                                                                {headerText: 'End',field: 'end'}]
+                                                                [{headerText: '',field: 'title',style: 'width: 80%;word-wrap: normal'},
+                                                                {headerText: 'Start',field: 'start',style: 'width: 10%;word-wrap: normal'},
+                                                                {headerText: 'End',field: 'end',style: 'width: 10%;word-wrap: normal'}],
+                                                            rootAttributes: {'style':'width: 100%;'}
                                                         }">
                                                     </table>
                                                 </div>
