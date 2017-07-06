@@ -1,0 +1,302 @@
+{
+    "title": "Dev Ops Starter Kit"
+    , "series": [{
+        "title": "Oracle Facilitated Workshop"
+        , "about": "<p>Oracle has invested in delivering a plethora of new Cloud Services and we want to show our customers how simple – yet powerful they are. We want to showcase their simplicity for the IT and for the non-IT community alike. We want to demonstrate how powerful they are, and how they should be considered as tools that can help an IT organization take the right steps in transforming for the Digital era.\n\nWe believe the best way to do this is to let our customers develop using our cloud services, hands-on!</p><p>Therefore, we have prepared an event where we can leverage the breadth of services customers’ receive as part of their trial accounts. Customers browse screens, configure automated builds, run automated deploys and create an application that combines data from multiple microservices to provide an end solution. This event can be run with guided expertise from our Oracle Platform Specialists, or directly as a self-guided event by the customer.</p>"
+        , "focus": ["Focused on providing customers with trial accounts a guide to services focused on application development and DevOps", "Allowing the customers to get an appreciation of Oracle’s cloud services by “touching” our services by following some very basic hands-on labs to build out a live solution", "At the end of the workshop be able to identify other key business problems that can be solved using these services", "This is not a training activity, ex: we do not expect that customers will go away knowing how to write microservices, etc - they just need to get an understanding and appreciation of Oracle's AppDev and DevOps approach to cloud application development"]
+        , "services": ["Developer Cloud Service", "Application Container Cloud Service", "Container Cloud Service", "MySQL Cloud Service"]
+        , "agenda": [{
+            "title": "Registration"
+            , "start": "08:30"
+            , "end": "08:45"
+        }, {
+            "title": "Intro to Oracle Trial Accounts"
+            , "start": "08:45"
+            , "end": "09:00"
+        }, {
+            "title": "AppDev Services Overview and Strategy for DevOps"
+            , "start": "09:00"
+            , "end": "10:30"
+        }, {
+            "title": "Break"
+            , "start": "10:30"
+            , "end": "11:00"
+        }, {
+            "title": "Lab 100: Build and Deploy your first Application"
+            , "start": "11:00"
+            , "end": "12:00"
+        }, {
+            "title": "Lunch"
+            , "start": "12:00"
+            , "end": "12:30"
+        }, {
+            "title": "Lab 200: Deploy a Java Microservice"
+            , "start": "12:30"
+            , "end": "13:30"
+        }, {
+            "title": "Lab 300: Build and Deploy a Supporting MySQL DB"
+            , "start": "13:30"
+            , "end": "14:30"
+        }, {
+            "title": "Lab 400: Build and Deploy a Google Go Microservice"
+            , "start": "14:30"
+            , "end": "15:30"
+        }, {
+            "title": "Close and Summary"
+            , "start": "15:30"
+            , "end": "16:00"
+        }]
+        , "organizing": "We have pre-packaged all the material required so other than arranging the logistics and inviting the customers you are good to go!"
+        , "collateral": [{
+            "title": "GSE Environements - Use Microservices Accounts"
+            , "link": "http://demo.oracle.com"
+        }, {
+            "title": "Lab Guide"
+            , "link": "https://rebrand.ly/ttcdevopslab"
+        }, {
+            "title": "Customer Presentation"
+            , "link": "https://rebrand.ly/ttcdevopsstarterkit"
+        }, {
+            "title": "Example Customer Flyer"
+            , "link": "https://rebrand.ly/ttcdevopsstarterkit"
+        }, {
+            "title": "Internal Workshop Overview"
+            , "link": "https://rebrand.ly/ttcdevopsstarterkit"
+        }, {
+            "title": "Internal Workshop Architecture"
+            , "link": "https://rebrand.ly/ttcdevopsstarterkit"
+        }, {
+            "title": "Workshop Feedback"
+            , "link": "https://rebrand.ly/ttcdevopsstarterkit"
+        }]
+        , "target": [{
+            "title": "Customer"
+            , "details": ["Those focused on AppDev", "Those focused on DevOps"]
+        }, {
+            "title": "Audience"
+            , "details": ["Developers", "DevOps Teams", "Release Management Teams", "IT Operations", "Architects"]
+        }, {
+            "title": "No expertise or development experience required."
+            , "details": []
+        }]
+        , "delivery": "This workshop is designed to be run either as a self-guided initiative by the customer or through facilitation provided by Oracle NAS Cloud Platform specialists. Each event is aimed at enabling the local sales and sales consulting team to replicate the approach as they wish."
+        , "oracleRequirements": ["To schedule the event, identify and invite the customers", "Let the NAS Cloud Platform specialist team know when and where this is looking to take place", "To source a location with good internet connectivity. It could be hosted in an Oracle office or another location (for example a partner office, customer premises)", "To provision catering for the day"]
+        , "customerRequirements": ["A laptop with WiFi and the ability to hit GitHub and Oracle Cloud - that's it!"]
+        , "contacts": [{
+            "name": "Cam Crockett"
+            , "email": "cam.crockett@oracle.com"
+            , "title": "Senior Cloud Platform Specialist"
+        }, {
+            "name": "Ed Shnekendorf"
+            , "email": "ed.shnekendorf@oracle.com"
+            , "title": "Principle Cloud Platform Specialist"
+        }, {
+            "name": "Brian Leonard"
+            , "email": "william.leonard@oracle.com"
+            , "title": "Principle Cloud Platform Specialist"
+        }, {
+            "name": "Sandeep Kherde"
+            , "email": "sandeep.kherde@oracle.com"
+            , "title": "Principle Cloud Platform Specialist"
+        }]
+    }, {
+        "title": "Self-Guided Workshop"
+        , "about": "<p>Looking for a way to get AppDev customers started with our cloud services? This workshop can be executed as a self-guided tour for customers with an Oracle Trial Account. Giving them a straight forward example of relevant serivces and techniquies for designing, deploying and managing cloud native applciations in Oracle's cloud.\n\nOracle has invested in delivering a plethora of new Cloud Services and we want to show our customers how simple – yet powerful they are. We want to showcase their simplicity for the IT and for the non-IT community alike. We want to demonstrate how powerful they are, and how they should be considered as tools that can help an IT organization take the right steps in transforming for the Digital era.\n\nWe believe the best way to do this is to let our customers develop using our cloud services, hands-on!</p><p>Therefore, we have prepared an event where we can leverage the breadth of services customers’ receive as part of their trial accounts. Customers browse screens, configure automated builds, run automated deploys and create an application that combines data from multiple microservices to provide an end solution. This event can be run with guided expertise from our Oracle Platform Specialists, or directly as a self-guided event by the customer.</p>"
+        , "focus": ["Focused on providing customers with trial accounts a guide to services focused on application development and DevOps", "Allowing the customers to get an appreciation of Oracle’s cloud services by “touching” our services by following some very basic hands-on labs to build out a live solution", "This is not a training activity, ex: we do not expect that customers will go away knowing how to write microservices, etc - they just need to get an understanding and appreciation of Oracle's AppDev and DevOps approach to cloud application development"]
+        , "services": ["Developer Cloud Service", "Application Container Cloud Service", "Container Cloud Service", "MySQL Cloud Service"]
+        , "agenda": [{
+            "title": "Self-Driven, estimated time to complete all labs and review workshop material ~6 hours"
+            , "start": "---"
+            , "end": "---"
+        }]
+        , "organizing": "We have pre-packaged all the material required so other than arranging the logistics and inviting the customers you are good to go!"
+        , "collateral": [{
+            "title": "Trial Accounts to run the labs on"
+            , "link": "https://cloud.oracle.com/en_US/tryit"
+        }, {
+            "title": "Lab Guide"
+            , "link": "https://rebrand.ly/ttcdevopslab"
+        }]
+        , "target": [{
+            "title": "Customer"
+            , "details": ["Trial Account holders focused on AppDev", "Trial Account holders focused on DevOps"]
+        }, {
+            "title": "Audience"
+            , "details": ["Developers", "DevOps Teams", "Release Management Teams", "IT Operations", "Architects"]
+        }, {
+            "title": "No expertise or development experience required."
+            , "details": []
+        }]
+        , "delivery": "This workshop is designed to be run either as a self-guided initiative by the customer or through facilitation provided by Oracle NAS Cloud Platform specialists. Each event is aimed at enabling the local sales and sales consulting team to replicate the approach as they wish."
+        , "oracleRequirements": ["To schedule the event as a self guided event, identify the customers", "provide the lab guide to the customer", "Let your NAS specialist team know a customer is executing the lab and offer to provide any assistance as needed"]
+        , "customerRequirements": ["A desktop/laptop with connectivity and the ability to hit GitHub and Oracle Cloud - that's it!"]
+        , "contacts": [{
+            "name": "Cam Crockett"
+            , "email": "cam.crockett@oracle.com"
+            , "title": "Senior Cloud Platform Specialist"
+        }, {
+            "name": "Ed Shnekendorf"
+            , "email": "ed.shnekendorf@oracle.com"
+            , "title": "Principle Cloud Platform Specialist"
+        }, {
+            "name": "Brian Leonard"
+            , "email": "william.leonard@oracle.com"
+            , "title": "Principle Cloud Platform Specialist"
+        }, {
+            "name": "Sandeep Kherde"
+            , "email": "sandeep.kherde@oracle.com"
+            , "title": "Principle Cloud Platform Specialist"
+        }]
+    }, {
+        "title": "Demo/Lunch & Learn"
+        , "about": "<p>To run this as a demo for the customer. Please follow the Oracle Facilitated Workshop guide to get a single GSE Account (or use a self-owned Trial Account). Then use the provided lab guide to execute the labs 100-400. At the completion of the demo you will have a working example of building, deploying and configuring a microservices application on Oracle's Cloud.</p>"
+        , "focus": ["Focused on providing customers a tour of services focused on application development and DevOps in Oracle's Cloud", "This is not a training activity, ex: we do not expect that customers will go away knowing how to write microservices, etc - they just need to get an understanding and appreciation of Oracle's AppDev and DevOps approach to cloud application development"]
+        , "services": ["Developer Cloud Service", "Application Container Cloud Service", "Container Cloud Service", "MySQL Cloud Service"]
+        , "agenda": [{
+            "title": "Self Driven Setup - time to build labs ~2-4 hours, depending on OPC services familiarity"
+            , "start": "---"
+            , "end": "---"
+        }]
+        , "organizing": "We have pre-packaged all the material required so other than arranging the logistics and inviting the customers you are good to go!"
+        , "collateral": [{
+            "title": "GSE Environements - Use Microservices Accounts"
+            , "link": "http://demo.oracle.com"
+        }, {
+            "title": "Lab Guide"
+            , "link": "https://rebrand.ly/ttcdevopslab"
+        }, {
+            "title": "Internal Workshop Overview"
+            , "link": "https://rebrand.ly/ttcdevopsstarterkit"
+        }, {
+            "title": "Internal Workshop Architecture"
+            , "link": "https://rebrand.ly/ttcdevopsstarterkit"
+        }]
+        , "target": [{
+            "title": "Customer"
+            , "details": ["Those focused on AppDev", "Those focused on DevOps"]
+        }, {
+            "title": "Audience"
+            , "details": ["Developers", "DevOps Teams", "Release Management Teams", "IT Operations", "Architects"]
+        }, {
+            "title": "No expertise or development experience required."
+            , "details": []
+        }]
+        , "delivery": "Build the application from the lab guide and then provide a tour of the different services, techniques and DevOps pracitces used to compose the microservices application"
+        , "oracleRequirements": ["To schedule the event, identify the customers", "Let the NAS Cloud Platform specialist team know when and where this is looking to take place as to provide any assistance required", "Ensure connectivity for demo at customer site", "catering if desired"]
+        , "customerRequirements": ["your time"]
+        , "contacts": [{
+            "name": "Cam Crockett"
+            , "email": "cam.crockett@oracle.com"
+            , "title": "Senior Cloud Platform Specialist"
+        }, {
+            "name": "Ed Shnekendorf"
+            , "email": "ed.shnekendorf@oracle.com"
+            , "title": "Principle Cloud Platform Specialist"
+        }, {
+            "name": "Brian Leonard"
+            , "email": "william.leonard@oracle.com"
+            , "title": "Principle Cloud Platform Specialist"
+        }, {
+            "name": "Sandeep Kherde"
+            , "email": "sandeep.kherde@oracle.com"
+            , "title": "Principle Cloud Platform Specialist"
+        }]
+    }, {
+        "title": "Developer Challenge"
+        , "about": "<p>To Run this as an Oracle Code Red Developer Challenge, you may run the workshop adding in developer and innovation challenges. It is advised that you shorten the intorduction slides and adjust the agenda to give time to work on the challenges as listed below.\n\nOracle has invested in delivering a plethora of new Cloud Services and we want to show our customers how simple – yet powerful they are. We want to showcase their simplicity for the IT and for the non-IT community alike. We want to demonstrate how powerful they are, and how they should be considered as tools that can help an IT organization take the right steps in transforming for the Digital era.</p><p>We believe the best way to do this is to let our customers develop using our cloud services, hands-on!</p><p>Therefore, we have prepared an event where we can leverage the breadth of services customers’ receive as part of their trial accounts. Customers browse screens, configure automated builds, run automated deploys and create an application that combines data from multiple microservices to provide an end solution. This event can be run with guided expertise from our Oracle Platform Specialists, or directly as a self-guided event by the customer.</p>"
+        , "focus": ["Focused on providing customers with trial accounts a guide to services focused on application development and DevOps", "Allowing the customers to get an appreciation of Oracle’s cloud services by “touching” our services by following some very basic hands-on labs to build out a live solution", "At the end of the workshop be able to identify other key business problems that can be solved using these services", "This is not a training activity, ex: we do not expect that customers will go away knowing how to write microservices, etc - they just need to get an understanding and appreciation of Oracle's AppDev and DevOps approach to cloud application development"]
+        , "services": ["Developer Cloud Service", "Application Container Cloud Service", "Container Cloud Service", "MySQL Cloud Service"]
+        , "agenda": [{
+            "title": "Registration"
+            , "start": "08:30"
+            , "end": "08:45"
+        }, {
+            "title": "AppDev Services Overview and Strategy for DevOps"
+            , "start": "08:45"
+            , "end": "09:15"
+        }, {
+            "title": "Workshop Overview"
+            , "start": "09:15"
+            , "end": "09:30"
+        }, {
+            "title": "Lab 100: Build and Deploy your first Application"
+            , "start": "09:30"
+            , "end": "10:15"
+        }, {
+            "title": "Lab 200: Deploy a Java Microservice"
+            , "start": "10:15"
+            , "end": "11:00"
+        }, {
+            "title": "Lab 300: Build and Deploy a Supporting MySQL DB"
+            , "start": "11:00"
+            , "end": "11:45"
+        }, {
+            "title": "Lunch"
+            , "start": "11:45"
+            , "end": "12:15"
+        }, {
+            "title": "Lab 400: Build and Deploy a Google Go Microservice"
+            , "start": "12:15"
+            , "end": "13:00"
+        }, {
+            "title": "Challenge Work"
+            , "start": "13:00"
+            , "end": "15:15"
+        }, {
+            "title": "Challenge Presentations"
+            , "start": "15:15"
+            , "end": "15:45"
+        }, {
+            "title": "Prizes, Close and Summary"
+            , "start": "15:45"
+            , "end": "16:00"
+        }]
+        , "organizing": "We have pre-packaged all the material required so other than arranging the logistics and inviting the customers you are good to go!"
+        , "collateral": [{
+            "title": "GSE Environements - Use Microservices Accounts"
+            , "link": "http://demo.oracle.com"
+        }, {
+            "title": "Lab Guide"
+            , "link": "https://rebrand.ly/ttcdevopslab"
+        }, {
+            "title": "Customer Presentation (Challenge Edition)"
+            , "link": "https://rebrand.ly/ttcdevopsstarterkit"
+        }, {
+            "title": "Internal Workshop Overview"
+            , "link": "https://rebrand.ly/ttcdevopsstarterkit"
+        }, {
+            "title": "Internal Workshop Architecture"
+            , "link": "https://rebrand.ly/ttcdevopsstarterkit"
+        }]
+        , "target": [{
+            "title": "Customer"
+            , "details": ["Those focused on AppDev", "Those focused on DevOps"]
+        }, {
+            "title": "Audience"
+            , "details": ["Developers", "DevOps Teams", "Release Management Teams", "IT Operations", "Architects"]
+        }, {
+            "title": "No expertise or development experience required."
+            , "details": []
+        }]
+        , "delivery": "This workshop is designed to be run either as a self-guided initiative by the customer or through facilitation provided by Oracle NAS Cloud Platform specialists. Each event is aimed at enabling the local sales and sales consulting team to replicate the approach as they wish."
+        , "oracleRequirements": ["To schedule the event, identify and invite the customers", "Let the NAS Cloud Platform specialist team know when and where this is looking to take place", "To source a location with good internet connectivity. It could be hosted in an Oracle office or another location (for example a partner office, customer premises)", "To provision catering for the day"]
+        , "customerRequirements": ["A laptop with WiFi and the ability to hit GitHub and Oracle Cloud - that's it!"]
+        , "contacts": [{
+            "name": "Cam Crockett"
+            , "email": "cam.crockett@oracle.com"
+            , "title": "Senior Cloud Platform Specialist"
+        }, {
+            "name": "Ed Shnekendorf"
+            , "email": "ed.shnekendorf@oracle.com"
+            , "title": "Principle Cloud Platform Specialist"
+        }, {
+            "name": "Brian Leonard"
+            , "email": "william.leonard@oracle.com"
+            , "title": "Principle Cloud Platform Specialist"
+        }, {
+            "name": "Sandeep Kherde"
+            , "email": "sandeep.kherde@oracle.com"
+            , "title": "Principle Cloud Platform Specialist"
+        }]
+    }]
+}
