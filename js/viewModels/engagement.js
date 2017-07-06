@@ -64,7 +64,7 @@ define(['ojs/ojcore', 'knockout', 'data/loader', 'data/images', 'jquery', 'ojs/o
                 return true;
             }
         };
-        self.tabImages = ko.observableArray(["oj-start demo-catalog-icon-24 demo-icon-font", "oj-start demo-people-icon-24 demo-icon-font", "oj-start demo-chat-icon-24 demo-icon-font", "oj-start demo-education-icon-24 demo-icon-font"]);
+        self.tabImages = ko.observableArray(["oj-start demo-education-icon-24 demo-icon-font", "oj-start demo-catalog-icon-24 demo-icon-font",  "oj-start demo-chat-icon-24 demo-icon-font", "oj-start demo-people-icon-24 demo-icon-font"]);
         back = function () {
             window.history.back();
         }
